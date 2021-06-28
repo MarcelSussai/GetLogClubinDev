@@ -1,7 +1,5 @@
-# Starter com as seguintes configurações já feitas:
+# Setup do projeto GetLogClub
 
-- Typescript
-- Styled-components
-- Theme do styled
-- Contexto Global
-- Criado pastas
+## Sistema delivery de gerenciamento de entrega e entregadores
+
+Em breve mais adições
