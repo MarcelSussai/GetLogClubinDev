@@ -13,6 +13,12 @@ export const S_btn_geral = styled.button`
   color: ${ ({theme}) => theme.colors.green.p300 };
   font-weight: 600;
   font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background: ${ ({theme}) => theme.colors.aqua.c700 };
+    /* box-shadow: inset 0 0 16px ${ ({theme}) => theme.colors.green.c800 }; */
+  }
 
   ${cusMQ(1024)} {
     font-size: 20px;

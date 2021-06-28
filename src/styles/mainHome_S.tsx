@@ -158,11 +158,11 @@ export const S_img_section_1 = styled.img`
 
 export const S_section_2 = styled(S_section_home)`
   margin-top: 24px;
-  display: flex;
   gap: 12px;
   justify-content: center;
   align-items: center;
-  flex-direction: column
+  flex-direction: column;
+
 `
 
 export const S_h2_home = styled.h2`
@@ -197,5 +197,98 @@ export const S_h2_home = styled.h2`
 `
 
 export const S_btn_register_home = styled(S_btn_geral)`
+`
 
+export const S_section_3 = styled(S_section_home)`
+  align-items: flex-end;
+  
+  ${cusMQ(768)} {
+    flex-direction: row-reverse;
+  }
+`
+
+export const S_card_container = styled(S_container_card_home)`
+  ${fontF}
+  /* gap: 4px; */
+  margin-top: 24px;
+  border-left: none;
+  border-right: solid 3px ${ ({theme}) => theme.colors.brown.c700 };
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+
+  ${cusMQ(768)} {
+    padding: 16px 16px 16px 40px;
+  }
+  ${cusMQ(1024)} {
+    width: 640px;
+  }
+`
+
+export const S_card_desc_01 = styled(S_card_container)`
+`
+
+export const S_h3_home = styled.h3`
+  font-size: 5.6vw;
+  padding: 12px;
+  font-weight: 800;
+  border-bottom: solid 2px ${ ({theme}) => theme.colors.brown.c700 };
+  color: ${ ({theme}) => theme.colors.brown.c700 };
+
+  ${cusMQ(425)} {
+    font-size: 5.2vw;
+  }
+  ${cusMQ(560)} {
+    font-size: 4.8vw;
+  }
+  ${cusMQ(680)} {
+    font-size: 4vw;
+  }
+  ${cusMQ(768)} {
+    font-size: 28px;
+  }
+`
+
+export const S_p_home_desc = styled.p`
+  padding: 12px;
+  font-size: 4.8vw;
+  font-weight: 500;
+  color: ${ ({theme}) => theme.colors.blue.c700 };
+
+  ${cusMQ(425)} {
+    font-size: 4.2vw;
+  }
+  ${cusMQ(560)} {
+    font-size: 3.6vw;
+  }
+  ${cusMQ(680)} {
+    font-size: 2.8vw;
+  }
+  ${cusMQ(768)} {
+    font-size: 16px;
+  }
+`
+
+export const S_img_home_desc = styled.img`
+  width: 48vw;
+  margin-top: -16px;
+  align-self: center;
+  ${cusMQ(560)} {
+    width: 40vw;
+  }
+  ${cusMQ(680)} {
+    width: 32vw;
+  }
+  ${cusMQ(768)} {
+    width: 192px;
+    margin-top: 0;
+    margin-right: -24px;
+  }
+  ${cusMQ(1024)} {
+    width: 256px;
+    margin-right: 0;
+    margin-top: 24px;
+    transform: translateX(24px)
+  }
 `

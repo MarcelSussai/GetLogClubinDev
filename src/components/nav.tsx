@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AppCtx } from "../contexts/ctxGlobal";
+import Link from 'next/link';
 import {
     S_a_nav_menu,
     S_btnMenu_piece,
@@ -27,10 +28,12 @@ const Nav = () => {
 
       <S_nav className={ctx_is_btnActive ? 'isActive' : ''}>
         <S_container_nav >
-          <S_a_nav_menu >
-            <S_enter_icon />
-            Entrar
-          </S_a_nav_menu>
+          <Link href="/register">
+            <S_a_nav_menu >
+              <S_enter_icon />
+              Entrar
+            </S_a_nav_menu>
+          </Link>
           <S_a_nav_menu >
             <S_addUser_icon />
             Cadastre-se
