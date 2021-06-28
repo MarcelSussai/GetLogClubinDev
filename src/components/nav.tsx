@@ -1,6 +1,15 @@
 import { useContext } from "react";
 import { AppCtx } from "../contexts/ctxGlobal";
-import { S_btnMenu_container, S_btnMenu_wrapper } from "../styles/nav_S";
+import {
+    S_a_nav_menu,
+    S_btnMenu_piece,
+    S_btnMenu_wrapper,
+    S_container_nav,
+    S_enter_icon,
+    S_nav,
+    S_addUser_icon,
+    S_contact_icon
+} from '../styles/nav_S';
 
 
 
@@ -12,9 +21,26 @@ const Nav = () => {
 
   return (
   <>
-    <S_btnMenu_container onClick={handle_click_btnMenu} className={ctx_is_btnActive ? 'isActive' : ''} >
-      <S_btnMenu_wrapper className="hoverSPBtnMenu" ></S_btnMenu_wrapper>
-    </S_btnMenu_container>
+      <S_btnMenu_wrapper onClick={handle_click_btnMenu} className={ctx_is_btnActive ? 'isActive' : ''}>
+        <S_btnMenu_piece className="hoverSPBtnMenu" ></S_btnMenu_piece>
+      </S_btnMenu_wrapper>
+
+      <S_nav className={ctx_is_btnActive ? 'isActive' : ''}>
+        <S_container_nav >
+          <S_a_nav_menu >
+            <S_enter_icon />
+            Entrar
+          </S_a_nav_menu>
+          <S_a_nav_menu >
+            <S_addUser_icon />
+            Cadastre-se
+          </S_a_nav_menu>
+          <S_a_nav_menu >
+            <S_contact_icon />
+            Contato
+          </S_a_nav_menu>
+        </S_container_nav>
+      </S_nav>
   </>
 );
 

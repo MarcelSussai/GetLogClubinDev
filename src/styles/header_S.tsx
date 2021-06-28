@@ -45,6 +45,7 @@ export const S_detailDiv = styled.div<Prop>`
     top: 0;
     left: ${props => props.left ? '-4px' : 'unset'};
     right: ${props => props.left ? 'unset' : '-4px'};
+    z-index: -140;
 
     background: ${ ({ theme }) => theme.colors.yellow.c200 };
     ${cusTR('.2s')}
@@ -96,9 +97,16 @@ export const S_containerHeader = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+
+  ${cusMQ(768)} {
+    width: 88%;
+    gap: 8px;
+    justify-content: space-between;
+  }
 
   ${cusMQ(1024)} {
-    width: 920px;
+    width: 864px;
   }
   ${cusMQ(1440)} {
     width: 1024px;

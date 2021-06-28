@@ -4,7 +4,7 @@ export const AppCtx = createContext({})
 
 export default function CtxProvider({ children }) {
 
-  const [ctx_is_btnActive, setCtx_is_btnActive] = useState(false)
+  const [ctx_is_btnActive, setCtx_is_btnActive] = useState<boolean>(false)
 
   return (
     <>      

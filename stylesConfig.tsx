@@ -247,7 +247,7 @@ export const theme: ThemeTypes = {
     white:        '#FFFFFF',
     whiteOpacity: '#FFFFFFdd',
     black:        '#000000',
-    blackShadow:  '#00000064',
+    blackShadow:  '#00000016',
   },
 }
 
