@@ -17,7 +17,7 @@ export const S_main_home = styled(S_main)`
 `
 
 export const S_section_home = styled.section`
-
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
 
@@ -157,7 +157,7 @@ export const S_img_section_1 = styled.img`
 `
 
 export const S_section_2 = styled(S_section_home)`
-  margin-top: 24px;
+  /* margin-top: 24px; */
   gap: 12px;
   justify-content: center;
   align-items: center;
@@ -172,6 +172,7 @@ export const S_h2_home = styled.h2`
   font-size: 6vw;
   font-weight: 500;
   color: ${ ({theme}) => theme.colors.blue.c700 };
+  margin-top: 48px;
 
   ${cusMQ(375)} {
     font-size: 5vw;
@@ -197,12 +198,18 @@ export const S_h2_home = styled.h2`
 `
 
 export const S_btn_register_home = styled(S_btn_geral)`
+  margin-bottom: 24px;
+  margin-top: 16px;
+  box-shadow: 
+    inset 0 0 8px ${ ({theme}) => theme.colors.greenShadow }
+  ;
+  border: solid 2px ${ ({theme}) => theme.colors.green.c500 };
 `
 
 export const S_section_3 = styled(S_section_home)`
   align-items: flex-end;
-  
   ${cusMQ(768)} {
+    margin-top: 64px;
     flex-direction: row-reverse;
   }
 `
@@ -224,6 +231,33 @@ export const S_card_container = styled(S_container_card_home)`
   ${cusMQ(1024)} {
     width: 640px;
   }
+  ${cusMQ(1440)} {
+    width: 800px;
+  }
+  ${cusMQ(1600)} {
+    width: 960px;
+  }
+`
+
+export const S_card_container_left = styled(S_card_container)`
+  border-right: none;
+  border-left: solid 3px ${ ({theme}) => theme.colors.brown.c700 };
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+  
+  ${cusMQ(768)} {
+    padding: 16px 40px 16px 16px;
+  }
+`
+
+export const S_section_3_left = styled(S_section_home)`
+
+  ${cusMQ(768)} {
+    margin-top: 64px;
+    flex-direction: row;
+  }
 `
 
 export const S_card_desc_01 = styled(S_card_container)`
@@ -233,8 +267,9 @@ export const S_h3_home = styled.h3`
   font-size: 5.6vw;
   padding: 12px;
   font-weight: 800;
-  border-bottom: solid 2px ${ ({theme}) => theme.colors.brown.c700 };
+  border-bottom: solid 1px ${ ({theme}) => theme.colors.brown.c700 };
   color: ${ ({theme}) => theme.colors.brown.c700 };
+  width: 100%;
 
   ${cusMQ(425)} {
     font-size: 5.2vw;
@@ -248,12 +283,18 @@ export const S_h3_home = styled.h3`
   ${cusMQ(768)} {
     font-size: 28px;
   }
+
+`
+
+export const S_h3_home_right = styled(S_h3_home)`
+  text-align: right;
 `
 
 export const S_p_home_desc = styled.p`
   padding: 12px;
   font-size: 4.8vw;
   font-weight: 500;
+  line-height: 1.4;
   color: ${ ({theme}) => theme.colors.blue.c700 };
 
   ${cusMQ(425)} {
@@ -268,6 +309,10 @@ export const S_p_home_desc = styled.p`
   ${cusMQ(768)} {
     font-size: 16px;
   }
+`
+
+export const S_p_home_desc_right = styled(S_p_home_desc)`
+  text-align: right;
 `
 
 export const S_img_home_desc = styled.img`
@@ -291,4 +336,91 @@ export const S_img_home_desc = styled.img`
     margin-top: 24px;
     transform: translateX(24px)
   }
+  ${cusMQ(1440)} {
+    &.maisprala {
+      transform: translateX(32px);
+    }
+  }
+  ${cusMQ(1600)} {
+    width: 200px;
+    margin-left: 40px;
+    transform: translateX(24px);
+  }
 `
+
+export const S_img_home_desc_right = styled(S_img_home_desc)`
+
+  ${cusMQ(768)} {
+    width: 200px;
+    margin-left: -24px;
+  }
+  ${cusMQ(1024)} {
+    width: 200px;
+    transform: translateX(0)
+  }
+  ${cusMQ(1440)} {
+    width: 200px;
+    margin-right: 40px;
+    transform: translateX(0)
+  }
+  ${cusMQ(1600)} {
+    /* width: 200px; */
+    margin-right: 56px;
+  }
+`
+
+export const S_footer = styled.footer`
+  position: relative;
+  width: 100%;
+  padding: 0 72px 16px 16px;
+  background: ${ ({theme}) => theme.colors.yellow.c200 };
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:before, &:after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    background: ${ ({theme}) => theme.colors.red.c200 };
+
+    height: 100%;
+    width: 4px;
+
+    ${cusMQ(425)} {
+      width: 8px;
+    }
+    ${cusMQ(680)} {
+      width: 12px;
+    }
+    ${cusMQ(1024)} {
+      width: 16px;
+    }
+    ${cusMQ(1440)} {
+      width: 24px;
+    }
+  }
+  &:after {
+    left: unset;
+    right: 0;
+  }
+`
+
+export const S_footer_p = styled.p`
+  ${fontF}
+  color: ${ ({theme}) => theme.colors.brown.c700 };
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: right;
+`
+
+export const S_footer_logo = styled.img`
+  width: 144px;
+  margin-bottom: 16px;
+  align-self: flex-end;
+`
+

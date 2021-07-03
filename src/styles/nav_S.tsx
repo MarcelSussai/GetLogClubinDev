@@ -129,7 +129,7 @@ export const S_nav = styled.nav`
 
 export const S_container_nav = styled.div`
   width: 100%;
-  height: 100%;
+  height: 80px;
   background: ${ ({theme}) => theme.colors.red.p500 };
   border-top-left-radius: 32px;
   border-bottom-left-radius: 32px;
@@ -160,6 +160,7 @@ export const S_container_nav = styled.div`
   }
 
   ${cusMQ(768)} {
+    height: 100%;
     border-top-left-radius: 0;
     border-bottom-left-radius: 32px;
     border-bottom-right-radius: 32px;

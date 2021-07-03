@@ -10,6 +10,7 @@ export const S_header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 200;
 
   display: flex;
   justify-content: center;

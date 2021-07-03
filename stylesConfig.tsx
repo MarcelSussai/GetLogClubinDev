@@ -159,6 +159,8 @@ export type ThemeTypes = {
     whiteOpacity: string;
     black:        string;
     blackShadow:  string;
+    blackShadow2:  string;
+    greenShadow: string;
   };
 }
 export const theme: ThemeTypes = {
@@ -248,6 +250,8 @@ export const theme: ThemeTypes = {
     whiteOpacity: '#FFFFFFdd',
     black:        '#000000',
     blackShadow:  '#00000016',
+    blackShadow2: '#00000048',
+    greenShadow:  '#BCFD0040',
   },
 }
 
