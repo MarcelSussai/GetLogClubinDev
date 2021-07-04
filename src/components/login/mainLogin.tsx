@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { AppCtx } from "../../contexts/ctxGlobal";
+import { S_btn_01 } from "../../styles/btns_S";
 import InptText from "../../styles/inpts_S";
 import { 
   S_mainLogin_main, S_mainLogin_section,
@@ -37,8 +38,11 @@ const MainLogin = () => {
     <S_mainLogin_main>
       <S_mainLogin_section>
         <S_mainLogin_text_h1>{txt_title}</S_mainLogin_text_h1>
-        <InptText label={txt_ph_email_label} placeholder={txt_ph_email} onChangeFN={handleEmailLogin} />
-        <InptText label={txt_ph_senha_label} placeholder={txt_ph_senha} onChangeFN={handleSenhaLogin} />
+        <S_mainLogin_section_item>
+          <InptText label={txt_ph_email_label} placeholder={txt_ph_email} onChangeFN={handleEmailLogin} />
+          <InptText label={txt_ph_senha_label} placeholder={txt_ph_senha} onChangeFN={handleSenhaLogin} />
+        </S_mainLogin_section_item>
+        <S_btn_01>Entrar</S_btn_01>
       </S_mainLogin_section>
     </S_mainLogin_main>
   </>

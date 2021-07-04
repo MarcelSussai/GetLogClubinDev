@@ -24,3 +24,22 @@ export const S_btn_geral = styled.button`
     font-size: 20px;
   }
 `
+
+export const S_btn_01 = styled.button`
+  ${fontF}
+
+  font-weight: 800;
+
+  color: ${ ({theme}) => theme.colors.green.p300 };
+  background: ${ ({theme}) => theme.colors.blue.c700 };
+  
+  margin: 8px 16px 16px 16px;
+  padding: 8px;
+  
+  border: none;
+  border-radius: 8px;
+
+  ${cusMQ(375)} {
+    margin: 8px 24px 24px 24px;
+  }
+`
