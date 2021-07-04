@@ -28,7 +28,7 @@ const Nav = () => {
 
       <S_nav className={ctx_is_btnActive ? 'isActive' : ''}>
         <S_container_nav >
-          <Link href="/register">
+          <Link href="/login">
             <S_a_nav_menu >
               <S_enter_icon />
               Entrar
