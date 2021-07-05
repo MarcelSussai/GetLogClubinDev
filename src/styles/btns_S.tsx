@@ -27,6 +27,7 @@ export const S_btn_geral = styled.button`
 
 export const S_btn_01 = styled.button`
   ${fontF}
+  ${cusTR('.2s')}
 
   font-weight: 800;
 
@@ -38,6 +39,11 @@ export const S_btn_01 = styled.button`
   
   border: none;
   border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background: ${ ({theme}) => theme.colors.blue.c800 };
+  }
 
   ${cusMQ(375)} {
     margin: 8px 24px 24px 24px;

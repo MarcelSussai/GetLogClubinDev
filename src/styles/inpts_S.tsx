@@ -61,15 +61,19 @@ const S_label = styled.label`
   text-transform: capitalize;
 
   position: absolute;
-  top: -4px;
+  top: -5px;
   left: 6px;
 
-  padding: 0 6px 0 6px;
+  padding: 2px 6px 2px 6px;
 
   background: ${ ({theme}) => theme.colors.white };
 
   line-height: 1;
 
+  /* border-top-left-radius: 12px;
+  border-top-right-radius: 12px; */
+
+  border-radius: 12px;
 
 `
 

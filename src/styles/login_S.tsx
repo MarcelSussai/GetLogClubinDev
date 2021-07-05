@@ -22,22 +22,27 @@ export const S_mainLogin_section = styled.section`
 
   background: ${ ({theme}) => theme.colors.blue.c100 };
 
-  border: solid 1px ${ ({theme}) => theme.colors.blue.c400 };
+  /* border: solid 1px ${ ({theme}) => theme.colors.blue.c300 }; */
   border-top: none;
-  border-left: solid 1px ${ ({theme}) => theme.colors.blue.c300 };
-  border-right: solid 1px ${ ({theme}) => theme.colors.blue.c300 };
-
+  /* border-left: solid 1px ${ ({theme}) => theme.colors.blue.c300 };
+  border-right: solid 1px ${ ({theme}) => theme.colors.blue.c300 }; */
   border-bottom-left-radius: 32px;
   border-bottom-right-radius: 32px;
-  border-top-left-radius: 4px;
+  border-top-left-radius: 8px;
   border-top-right-radius: 4px;
+
+  box-shadow: 0 8px 16px ${ ({theme}) => theme.colors.gray.c200 };
+
+  ${cusMQ(512)} {
+    width: 392px;
+  }
 `
 
 export const S_mainLogin_section_item = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   padding: 16px 16px 8px 16px;
 
   ${cusMQ(375)} {
@@ -54,6 +59,8 @@ export const S_mainLogin_text_h1 = styled.h1`
 
   text-align: center;
 
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   border-bottom: solid 8px ${ ({theme}) => theme.colors.blue.c600 };
 
   color: ${ ({theme}) => theme.colors.blue.c600 };
@@ -64,3 +71,48 @@ export const S_mainLogin_text_h1 = styled.h1`
 
 `
 
+export const S_a_esqueciSenha = styled.a`
+  ${fontF}
+  ${cusTR('.2s')}
+
+  font-size: 11px;
+  font-weight: 600;
+
+  background: ${ ({theme}) => theme.colors.green.c200 };
+  padding: 2px 8px 2px 8px;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-top: solid 2px ${ ({theme}) => theme.colors.blue.c300 };
+  border-bottom: solid 2px ${ ({theme}) => theme.colors.blue.c300 };
+  
+  color: ${ ({theme}) => theme.colors.blue.c600 };
+  cursor: pointer;
+
+  &:hover {
+    border-top: solid 2px ${ ({theme}) => theme.colors.green.p300 };
+    border-bottom: solid 2px ${ ({theme}) => theme.colors.green.p300 };
+    color: ${ ({theme}) => theme.colors.green.p300 };
+    background: ${ ({theme}) => theme.colors.blue.c800 };
+  }
+
+  ${cusMQ(375)} {
+    font-size: 13px;
+  }
+  ${cusMQ(425)} {
+    padding: 2px 24px 2px 8px;
+  }
+`
+
+export const S_a_container_esqueciSenha = styled.div`
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+
+`
