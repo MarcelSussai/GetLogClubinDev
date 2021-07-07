@@ -25,19 +25,20 @@ const Nav = () => {
       <S_btnMenu_wrapper onClick={handle_click_btnMenu} className={ctx_is_btnActive ? 'isActive' : ''}>
         <S_btnMenu_piece className="hoverSPBtnMenu" ></S_btnMenu_piece>
       </S_btnMenu_wrapper>
-
       <S_nav className={ctx_is_btnActive ? 'isActive' : ''}>
         <S_container_nav >
           <Link href="/login">
-            <S_a_nav_menu >
+            <S_a_nav_menu onClick={handle_click_btnMenu} >
               <S_enter_icon />
               Entrar
             </S_a_nav_menu>
           </Link>
-          <S_a_nav_menu >
-            <S_addUser_icon />
-            Cadastre-se
-          </S_a_nav_menu>
+          <Link href="/register">
+            <S_a_nav_menu onClick={handle_click_btnMenu} >
+              <S_addUser_icon />
+              Cadastre-se
+            </S_a_nav_menu>
+          </Link>
           <S_a_nav_menu >
             <S_contact_icon />
             Contato

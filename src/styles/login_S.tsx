@@ -18,7 +18,8 @@ export const S_mainLogin_section = styled.section`
   flex-direction: column;
   gap: 16px;
 
-  margin: 16px 0 0 0;
+  margin: 16px 0 32px 0;
+  padding: 0 0 24px 0;
 
   background: ${ ({theme}) => theme.colors.blue.c100 };
 
@@ -116,3 +117,20 @@ export const S_a_container_esqueciSenha = styled.div`
 
 
 `
+
+export const S_mainRegister_main = styled(S_main)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+export const S_mainRegister_section = styled(S_mainLogin_section)`
+`
+
+export const S_mainRegister_text_h1 = styled(S_mainLogin_text_h1)`
+`
+
+export const S_mainRegister_section_item = styled(S_mainLogin_section_item)`
+`
+

@@ -7,7 +7,7 @@ import MainLogin from "../src/components/login/mainLogin";
 const Login = () => {
   return (
   <>
-    <Head title="Home" />
+    <Head title="Entrar" />
     <Header />
     <MainLogin />
   </>

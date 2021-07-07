@@ -1,3 +1,5 @@
+
+import Link from 'next/link';
 import { 
   S_containerHeader, 
   S_container_Logo, 
@@ -18,9 +20,11 @@ const Header = () => {
     <S_detailDiv left={true} />
     <S_header>
       <S_containerHeader>
-        <S_container_Logo>
-          <S_img_Logo src="/logoGetLogClub.svg" alt={alt_logo} />
-        </S_container_Logo>
+        <Link href="/">
+          <S_container_Logo>
+            <S_img_Logo src="/logoGetLogClub.svg" alt={alt_logo} />
+          </S_container_Logo>
+        </Link>
         <Nav />
       </S_containerHeader>
     </S_header>
