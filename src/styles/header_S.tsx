@@ -121,6 +121,7 @@ export const S_container_Logo = styled.div`
   width: 80%;
   position: relative;
   ${cusTR('.2s')}
+  cursor: pointer;
 
   &:before {
     content: '';

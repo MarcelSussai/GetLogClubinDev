@@ -38,6 +38,8 @@ export const S_desc_radio_label = styled.label`
   width: 100%;
   color: ${ ({theme}) => theme.colors.blue.c700 };
 
+  cursor: pointer;
+
   &.backG {
     background: ${ ({theme}) => theme.colors.blue.c200 };
   }

@@ -126,6 +126,7 @@ export const S_mainRegister_main = styled(S_main)`
 `
 
 export const S_mainRegister_section = styled(S_mainLogin_section)`
+
 `
 
 export const S_mainRegister_text_h1 = styled(S_mainLogin_text_h1)`
