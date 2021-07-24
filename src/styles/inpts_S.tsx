@@ -48,6 +48,9 @@ const S_input = styled.input<{fluid?: string, colorInput?: string}>`
     color: ${ ({theme, colorInput}) => colorInput === 'true' ? theme.colors.brown.c800 : theme.colors.blue.c800 };
     opacity: .3;
   }
+  /* &::-webkit-calendar-picker-indicator {
+    color: #cc33ff;
+  } */
 `
 
 const S_label = styled.label<{colorInput?: string}>`

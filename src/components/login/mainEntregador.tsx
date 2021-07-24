@@ -3,6 +3,7 @@ import { cusMQ, cusTR, fontF } from '../../../stylesConfig'
 import InptText from '../../styles/inpts_S'
 import { S_main } from '../../styles/main_S'
 import { useState } from 'react'
+import Inpts_Files_S from '../../styles/inpts_files_S'
 
 
 
@@ -71,6 +72,8 @@ const MainEntregador = () => {
   const [e_nasc, setE_nasc] = useState('')
   const changeNasc = (e) => setE_nasc(e.target.value)
 
+  const changeDoc = (e) => { console.log(e.target.files) }
+
   return (
   <>
     <S_main_registerEntregador>
@@ -103,6 +106,10 @@ const MainEntregador = () => {
 
             <InptText id="nasc" label="Data de Nascimento:" placeholder="selecione ou digite a data" 
               colorInput="true" onChangeFN={changeNasc} typeDate='a'
+            />
+
+            <Inpts_Files_S id="docs" onChangeFN={changeDoc} txtLabel="Fotos frente/verso do RG e CPF" 
+              txtDesc="Anexar documentos"
             />
 
           </S_div_container_03>
