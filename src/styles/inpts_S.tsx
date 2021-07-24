@@ -6,8 +6,10 @@ import { AppCtx } from '../contexts/ctxGlobal';
 
 
 
-const S_container = styled.div`
+const S_container = styled.div<{area: any}>`
   position: relative;
+  display: flex;
+  grid-area: ${ ({area}) => area };
 
   width: 100%;
 
@@ -90,15 +92,16 @@ type Props = {
   onChangeFN?: any;
   colorInput?: string;
   typeDate?: string;
+  area?: any;
 }
 const InptText = (props: Props) => {
 
 
-  const { label, placeholder, id, onChangeFN, colorInput, typeDate } = props
+  const { label, placeholder, id, onChangeFN, colorInput, typeDate, area } = props
 
   return (
   <>
-    <S_container>
+    <S_container area={area}>
       <S_label colorInput={colorInput} htmlFor={id || ''}>{label || 'label'}</S_label>
       <S_input type={
         typeDate === 'a' ? 'date' 

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { cusMQ, cusTR, fontF } from '../../stylesConfig';
 
-const S_div_01 = styled.div`
+const S_div_01 = styled.div<{area: any}>`
+  grid-area: ${({area}) => area};
 `
 const S_div_02 = styled.div`
   ${cusTR('.2s')}
@@ -11,8 +12,9 @@ const S_div_02 = styled.div`
   display: flex;
   border-radius: 12px;
   flex-direction: row;
-  margin: 8px 0 0 0;
+  /* margin: 8px 0 0 0; */
   cursor: pointer;
+  width: 100%;
   
   &:hover {
     background: ${ ({theme}) => theme.colors.aqua.c700 };
@@ -20,19 +22,25 @@ const S_div_02 = styled.div`
 `
 const S_div_03 = styled.div`
   padding: 8px;
+  
 `
 const S_label = styled.label`
   position: relative;
 `
 const S_span_01 = styled.span`
-  
+  position: absolute;
+  line-height: 1;
+  left: 0;
+  top: -16px;
+  width: 240px;
   ${fontF}
   ${cusTR('.2s')}
   font-size: 13px;
   font-weight: 700;
   color: ${ ({theme}) => theme.colors.brown.c600 };
-  padding: 2px 6px 2px 6px;
+  padding: 0 6px 0 8px;
   border-radius: 12px;
+  z-index: 160;
 `
 const S_span_02 = styled.span`
   ${fontF}
@@ -62,15 +70,16 @@ type Props = {
   value?: any;
   txtLabel?: string;
   txtDesc?: string;
+  area?: any;
 }
 
 const Inpts_Files_S = (props: Props) => {
   
-  const { id, onChangeFN, value, txtLabel, txtDesc } = props
+  const { id, onChangeFN, value, txtLabel, txtDesc, area } = props
   
   return (
   <>
-    <S_div_01>
+    <S_div_01 area={area}>
       <S_label htmlFor={id}>
         <S_span_01>
           {txtLabel || 'label'}
