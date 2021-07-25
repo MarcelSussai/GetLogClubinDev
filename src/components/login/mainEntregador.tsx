@@ -183,7 +183,7 @@ const MainEntregador = () => {
             <InptText id="email" label="E-mail:" placeholder="digite seu e-mail" 
               colorInput="true" onChangeFN={changeEmail} area="email"
             />
-            <InptText id="tel1" label="Telefone para contato:" placeholder="digite o telefone" 
+            <InptText id="tel1" label="Tel para contato:" placeholder="digite o telefone" 
               colorInput="true" onChangeFN={changeTel1} area="tel1"
             />
             <InptText id="nasc" label="Data de Nascimento:" placeholder="selecione ou digite a data" 

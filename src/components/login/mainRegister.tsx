@@ -54,7 +54,7 @@ const MainRegister = () => {
 
   const H_type = (e) => {
     setValue(e.target.value)
-    // console.log(e.target.value)
+    console.log(e.target.value)
   }
 
   const onChange_email            = (e) => setEmail(e.target.value)
