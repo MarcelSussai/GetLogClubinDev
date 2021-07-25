@@ -4,6 +4,7 @@ import InptText from '../../styles/inpts_S'
 import { S_main } from '../../styles/main_S'
 import { useState } from 'react'
 import Inpts_Files_S from '../../styles/inpts_files_S'
+import { S_btn_02 } from '../../styles/btns_S'
 
 
 
@@ -17,6 +18,7 @@ const S_div_container_01 = styled.div`
   display: flex;
   flex-direction: column;
   width: 88%;
+  margin-bottom: 48px;
 `
 const S_div_container_02 = styled.div`
   display: flex;
@@ -39,8 +41,8 @@ const S_div_container_03 = styled.div`
   ${cusMQ(768)} {
     display: grid;
     grid-template-areas: 
-      " name rg cpf "
-      " email email tel1 "
+      " name name rg "
+      " cpf email tel1 "
       " nasc nasc docs "
       " rua number obs "
       " bairro cidade estado "
@@ -72,7 +74,10 @@ const S_div_container_04 = styled.div`
   gap: 16px;
   
   ${cusMQ(768)} {
-    flex-direction: row;
+    display: grid;
+    grid-template-areas: 
+      "ano modelo placa cor"
+    ;
   }
 `
 const S_h1 = styled.h1`
@@ -80,6 +85,13 @@ const S_h1 = styled.h1`
   font-size: 18px;
   font-weight: 900;
   color: ${ ({theme}) => theme.colors.brown.c700 };
+  
+  ${cusMQ(425)} {
+    font-size: 24px;
+  }
+  ${cusMQ(768)} {
+    font-size: 28px;
+  }
 `
 const S_h2_01 = styled.h2`
   ${fontF}
@@ -209,18 +221,19 @@ const MainEntregador = () => {
           <S_h2_01>Dados do Veículo</S_h2_01>
           <S_div_container_04>
             <InptText id="ano" label="Ano:" placeholder="ano" 
-              colorInput="true" onChangeFN={changeAno}
+              colorInput="true" onChangeFN={changeAno} area="ano"
             />
             <InptText id="modelo" label="Modelo:" placeholder="modelo" 
-              colorInput="true" onChangeFN={changeModelo}
+              colorInput="true" onChangeFN={changeModelo} area="modelo"
             />
             <InptText id="placa" label="Placa:" placeholder="placa" 
-              colorInput="true" onChangeFN={changePlaca}
+              colorInput="true" onChangeFN={changePlaca} area="placa"
             />
             <InptText id="cor" label="Cor:" placeholder="cor" 
-              colorInput="true" onChangeFN={changeCor}
+              colorInput="true" onChangeFN={changeCor} area="cor"
             />
           </S_div_container_04>
+          <S_btn_02>Cadastrar</S_btn_02>
         </S_div_container_02>
       </S_div_container_01>
 

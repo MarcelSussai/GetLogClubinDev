@@ -38,6 +38,7 @@ const S_input = styled.input<{fluid?: string, colorInput?: string}>`
   border-top-right-radius: 4px;
 
   box-shadow: 0 2px 8px ${ ({theme}) => theme.colors.blackShadow3 };
+  background: ${ ({theme}) => theme.colors.white };
 
   &:focus {
     outline: 0;

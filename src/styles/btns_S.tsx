@@ -49,3 +49,14 @@ export const S_btn_01 = styled.button`
     margin: 8px 24px 24px 24px;
   }
 `
+
+export const S_btn_02 = styled(S_btn_01)`
+  color: ${ ({theme}) => theme.colors.green.p300 };
+  background: ${ ({theme}) => theme.colors.aqua.c600 };
+  align-self: flex-end;
+  width: 200px;
+  
+  &:hover {
+    background: ${ ({theme}) => theme.colors.aqua.c700 };
+  }
+`

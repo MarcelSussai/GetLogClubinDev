@@ -3,6 +3,10 @@ import { cusMQ, cusTR, fontF } from '../../stylesConfig';
 
 const S_div_01 = styled.div<{area: any}>`
   grid-area: ${({area}) => area};
+  margin-top: 16px;
+  ${cusMQ(768)} {
+    margin-top: 8px;
+  }
 `
 const S_div_02 = styled.div`
   ${cusTR('.2s')}
