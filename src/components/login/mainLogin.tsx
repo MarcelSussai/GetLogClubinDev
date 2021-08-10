@@ -8,6 +8,7 @@ import {
   S_mainLogin_section_item, S_mainLogin_text_h1,
   S_a_esqueciSenha, S_a_container_esqueciSenha,
 } from "../../styles/login_S";
+import Link from 'next/link';
 
 
 
@@ -63,7 +64,9 @@ const MainLogin = () => {
           <CheckBox_01 chk={tChk} chkHandler={chkHandler} txt_label="lembrar senha" />
           <S_a_esqueciSenha> {txt_esqueciSenha} </S_a_esqueciSenha>
         </S_a_container_esqueciSenha>
-        <S_btn_01>Entrar</S_btn_01>
+        <link href="/dashPainelRestaurante">
+          <S_btn_01>Entrar</S_btn_01>
+        </link>
       </S_mainLogin_section>
     </S_mainLogin_main>
   </>

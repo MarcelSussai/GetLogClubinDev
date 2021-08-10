@@ -6,7 +6,7 @@ import {
   S_mainRegister_text_h1, S_mainRegister_section_item,
 } from "../../styles/login_S";
 import { S_desc_radio_label, S_inpt_radio_01, S_radio_container_01 } from "../../styles/radios_S";
-
+import Link from 'next/link'
 
 
 const txtH1             = 'Criar conta'
@@ -109,7 +109,13 @@ const MainRegister = () => {
             onChangeFN={onChange_confirmedPass}
           />
         </S_mainRegister_section_item>
-        <S_btn_01>{txtBtn}</S_btn_01>
+        <Link href={
+          value === 'Entregador' ? 
+          '/registerEntregador' : 
+          '/registerRestaurante'
+        }>
+          <S_btn_01>{txtBtn}</S_btn_01>
+        </Link>
       </S_mainRegister_section>
     </S_mainRegister_main>
   </>

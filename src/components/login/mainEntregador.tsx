@@ -19,6 +19,16 @@ const S_div_container_01 = styled.div`
   flex-direction: column;
   width: 88%;
   margin-bottom: 48px;
+
+  ${cusMQ(1024)} {
+    width: 864px;
+  }
+  ${cusMQ(1440)} {
+    width: 1024px;
+  }
+  ${cusMQ(1600)} {
+    width: 1200px;
+  }
 `
 const S_div_container_02 = styled.div`
   display: flex;
