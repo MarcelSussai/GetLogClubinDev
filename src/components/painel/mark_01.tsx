@@ -35,7 +35,7 @@ const S_div_03 = styled.div`
   text-align: center;
 `
 
-const Mark_01: React.FC  = () => {
+const Mark_01: React.FC<any> = (props: any) => {
   return (
   <>
     <S_div_01>
