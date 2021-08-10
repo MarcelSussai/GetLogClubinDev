@@ -2,7 +2,7 @@
 
 
 
-const MarkerPoint = (props) => {
+const MarkerPoint = (props: any) => {
 
   const { c } = props
 
